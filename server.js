@@ -18,9 +18,16 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/article-one', function (req, res){
-    res.send(path.join('Article one requested. Will send the file shortly.'))
+    res.send(path.join('Article one requested. Will send the file shortly.'));
 });
 
+app.get('/article-two', function (req, res){
+    res.send('Article two will be sent shortly.');
+});
+
+app.get ( '/article-three', function(req, res){
+    res.send('Article-three will be sent shortly.');
+});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
