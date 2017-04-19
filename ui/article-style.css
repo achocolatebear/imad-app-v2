@@ -1,0 +1,9 @@
+.main {
+                max-width: 980px;
+                margin: 0 auto;
+                font-family: BlinkMacSystemFont, sans-serif;
+                color: #353535;
+                padding-top: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
