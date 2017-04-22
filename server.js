@@ -21,7 +21,7 @@ var articleOne = {
                 </p>
                  <p>
                     This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph.This is a sample paragraph.
-                </p>`
+                </p>`,
 };
 
 function createHtml(data){
