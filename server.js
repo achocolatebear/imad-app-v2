@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var article = {
+var articles = {
     articleOne:{
                 title: "  Article One | Harsha's IMAD V1 App",
                 heading: "Article One",
@@ -68,14 +68,15 @@ var article = {
                             </p>`,},
 };
 
-function createHtml(data){
+function createTemplate (data){
     
 var title = data.title;
 var heading = data.heading;
 var date = data.date;
 var content = data.content;
 
-var htmlTemplate = `<html>
+var htmlTemplate = `
+<html>
     <head>
         <title>
           ${title}
@@ -104,7 +105,7 @@ var htmlTemplate = `<html>
         </div>
     </body>
 </html>`;
-return createHtml;
+return htmlTemplate;
 }
 
 
@@ -121,7 +122,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/article-one', function (req, res){
-    res.send(createHtml(article.articleOne));
+    res.send(createTemplate(article.articleOne));
 });
 
 app.get('/article-two', function (req, res){
