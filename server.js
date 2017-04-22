@@ -6,22 +6,66 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleOne = {
-    title: "  Article One | Harsha's IMAD V1 App",
-    heading: "Article One",
-    date: "April 19th (Night) 2017",
-    content: `<p>
-                    This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph.This is a sample paragraph.
-                </p>
-                 <p>
-                    This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph.This is a sample paragraph.
-                </p>
-                 <p>
-                    This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph.This is a sample paragraph.
-                </p>
-                 <p>
-                    This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph.This is a sample paragraph.
-                </p>`,
+var article = {
+    articleOne:{
+                title: "  Article One | Harsha's IMAD V1 App",
+                heading: "Article One",
+                date: "April 21st (Night) 2017",
+                content: `<p>
+                                This is a sample paragraph for the 1st article.This is a sample paragraph for the 1st  article.This is a sample paragraph for the 1st article.This is a sample paragraph for the 1st article.
+                            </p>
+                            
+                            <p>
+                                This is a sample paragraph for the 1st article.This is a sample paragraph for the 1st  article.This is a sample paragraph for the 1st article.This is a sample paragraph for the 1st article.
+                            </p>
+                            
+                            <p>
+                                This is a sample paragraph for the 1st article.This is a sample paragraph for the 1st  article.This is a sample paragraph for the 1st article.This is a sample paragraph for the 1st article.
+                            </p>
+                            
+                             <p>
+                                    This is a sample paragraph for the 1st article.This is a sample paragraph for the 1st  article.This is a sample paragraph for the 1st article.This is a sample paragraph for the 1st article.
+                            </p>`,
+},
+    articleTwo:{
+                title: "  Article Two | Harsha's IMAD V1 App",
+                heading: "Article Two",
+                date: "April 21st (Night) 2017",
+                content: `<p>
+                                This is a sample paragraph for the 2nd article.This is a sample paragraph for the 2nd  article.This is a sample paragraph for the 2nd article.This is a sample paragraph for the 2nd article.
+                            </p>
+                            
+                            <p>
+                                This is a sample paragraph for the 2nd article.This is a sample paragraph for the 2nd article.This is a sample paragraph for the 2nd article.This is a sample paragraph for the 2nd article.
+                            </p>
+                            
+                            <p>
+                                This is a sample paragraph for the 2nd article.This is a sample paragraph for the 2nd article.This is a sample paragraph for the 2nd article.This is a sample paragraph for the 2nd article.
+                            </p>
+                            
+                             <p>
+                                    This is a sample paragraph for the 2nd article.This is a sample paragraph for the 2nd article.This is a sample paragraph for the 2nd article.This is a sample paragraph for the 2nd article.
+                            </p>`,
+},
+    articleThree:{
+                    title: "Article Three | Harsha's IMAD V1 App",
+                    heading: "Article Three",
+                    date: "April 21st (Night) 2017",
+                    content: `<p>
+                                This is a sample paragraph for the 3rd article.This is a sample paragraph for the 3rd  article.This is a sample paragraph for the 3rd article.This is a sample paragraph for the 3rd article.
+                            </p>
+                            
+                            <p>
+                               This is a sample paragraph for the 3rd article.This is a sample paragraph for the 3rd  article.This is a sample paragraph for the 3rd article.This is a sample paragraph for the 3rd article.
+                            </p>
+                            
+                            <p>
+                                This is a sample paragraph for the 3rd article.This is a sample paragraph for the 3rd  article.This is a sample paragraph for the 3rd article.This is a sample paragraph for the 3rd article.
+                            </p>
+                            
+                             <p>
+                                    This is a sample paragraph for the 3rd article.This is a sample paragraph for the 3rd  article.This is a sample paragraph for the 3rd article.This is a sample paragraph for the 3rd article.
+                            </p>`,},
 };
 
 function createHtml(data){
