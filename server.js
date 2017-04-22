@@ -52,10 +52,10 @@ var htmlTemplate = `<html>
                 </h2>
             </div>
             <div>
-                ${date};
+                ${date}
             </div>
             <div>
-                ${content};
+                ${content}
             </div>
         </div>
     </body>
