@@ -5,6 +5,65 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var articleOne = {
+    title: "  Article One | Harsha's IMAD V1 App",
+    heading: "Article One",
+    date: "April 19th (Night) 2017",
+    content: `<p>
+                    This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph.This is a sample paragraph.
+                </p>
+                 <p>
+                    This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph.This is a sample paragraph.
+                </p>
+                 <p>
+                    This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph.This is a sample paragraph.
+                </p>
+                 <p>
+                    This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph. This is a sample paragraph.This is a sample paragraph.
+                </p>`
+};
+
+var createHtml = function(){
+    
+var title = articleOne.title;
+var heading = articleOne.heading;
+var date = articleOne.date;
+var content = articleOne.content;
+
+var htmlTemplate = `<html>
+    <head>
+        <title>
+          ${title}
+        </title>
+         <link href="/ui/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="main">
+            <div>
+                <a href="/">Home</a> 
+                <a href="http://achocolatebear.imad.hasura-app.io/article-two">Article Two</a> 
+                <a href="http://achocolatebear.imad.hasura-app.io/article-three">Article Three</a>
+            </div>
+            <hr/>
+            <div>
+                <h2>
+                  ${heading}
+                </h2>
+            </div>
+            <div>
+                ${date};
+            </div>
+            <div>
+                ${content};
+            </div>
+        </div>
+    </body>
+</html>`;
+return createHtml;
+};
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -18,7 +77,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/article-one', function (req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.send(createHtml(articleOne));
 });
 
 app.get('/article-two', function (req, res){
