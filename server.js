@@ -108,9 +108,12 @@ var htmlTemplate = `
 return htmlTemplate;
 }
 
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+app.get('/ui/main', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.js'));
 });
 
 app.get('/ui/style.css', function (req, res) {
