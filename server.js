@@ -70,10 +70,10 @@ var article = {
 
 function createHtml(data){
     
-var title = articleOne.title;
-var heading = articleOne.heading;
-var date = articleOne.date;
-var content = articleOne.content;
+var title = data.title;
+var heading = data.heading;
+var date = data.date;
+var content = data.content;
 
 var htmlTemplate = `<html>
     <head>
