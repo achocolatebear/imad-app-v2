@@ -24,7 +24,7 @@ var articleOne = {
                 </p>`
 };
 
-var createHtml = function(){
+function createHtml(data){
     
 var title = articleOne.title;
 var heading = articleOne.heading;
